@@ -1,0 +1,30 @@
+// Border-box all around baby.
+*, *:before, *:after {
+	@include box-sizing( border-box );
+}
+
+
+body {
+	background: #eee;
+	@include font( normal , $base-font-size , #{$font-primary, $helvetica} , $colour-body );
+}
+
+
+p {}
+
+
+img {
+	border: 0;
+	display: block;
+	
+	&.responsive {
+		height: auto;
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+
+pre {
+	@include prefixer( tab-size , 4 , moz o spec );
+}

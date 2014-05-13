@@ -1,0 +1,92 @@
+/*
+|--------------------------------------------------------------------------
+| Spacing
+|--------------------------------------------------------------------------
+| 
+| Simple margin/padding control over elements.
+| 
+*/
+
+
+// Configurable sizes.
+$n: 0;
+$s: 5px;
+$m: 10px;
+$l: 20px;
+$x: 40px;
+
+
+
+// Margin all.
+.man { margin: $n; }
+.mas { margin: $s; }
+.mam { margin: $m; }
+.mal { margin: $l; }
+.max { margin: $x; }
+
+// Padding all.
+.pan { padding: $n; }
+.pas { padding: $s; }
+.pam { padding: $m; }
+.pal { padding: $l; }
+.pax { padding: $x; }
+
+
+
+// Margin top.
+.mtn { margin-top: $n; }
+.mts { margin-top: $s; }
+.mtm { margin-top: $m; }
+.mtl { margin-top: $l; }
+.mtx { margin-top: $x; }
+
+// Margin bottom.
+.mbn { margin-bottom: $n; }
+.mbs { margin-bottom: $s; }
+.mbm { margin-bottom: $m; }
+.mbl { margin-bottom: $l; }
+.mbx { margin-bottom: $x; }
+
+// Margin left.
+.mln { margin-left: $n; }
+.mls { margin-left: $s; }
+.mlm { margin-left: $m; }
+.mll { margin-left: $l; }
+.mlx { margin-left: $x; }
+
+// Margin right.
+.mrn { margin-right: $n; }
+.mrs { margin-right: $s; }
+.mrm { margin-right: $m; }
+.mrl { margin-right: $l; }
+.mrx { margin-right: $x; }
+
+
+
+// Padding top.
+.ptn { padding-top: $n; }
+.pts { padding-top: $s; }
+.ptm { padding-top: $m; }
+.ptl { padding-top: $l; }
+.ptx { padding-top: $x; }
+
+// Padding bottom.
+.pbn { padding-bottom: $n; }
+.pbs { padding-bottom: $s; }
+.pbm { padding-bottom: $m; }
+.pbl { padding-bottom: $l; }
+.pbx { padding-bottom: $x; }
+
+// Padding left.
+.pln { padding-left: $n; }
+.pls { padding-left: $s; }
+.plm { padding-left: $m; }
+.pll { padding-left: $l; }
+.plx { padding-left: $x; }
+
+// Padding right.
+.prn { padding-right: $n; }
+.prs { padding-right: $s; }
+.prm { padding-right: $m; }
+.prl { padding-right: $l; }
+.prx { padding-right: $x; }

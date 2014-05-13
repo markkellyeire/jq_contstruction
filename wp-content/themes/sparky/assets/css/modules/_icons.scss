@@ -1,0 +1,6 @@
+// Base icon styles. Default size 16x16.
+i[class^='icon-'] { @include icon-base; }
+
+// Examples. See _mixins.scss for icon mixin.
+// i.icon-social-fb { @include icon( 0 , 0 , 41px , 41px , 3px 3px 0 0 ); }
+// i.icon-social-tw { @include icon( 0 , 1 , 41px , 41px , 3px 3px 0 0 ); }

@@ -1,0 +1,42 @@
+/*
+|--------------------------------------------------------------------------
+| Grid
+|--------------------------------------------------------------------------
+| 
+| This file will input the correct settings for neat to generate our CSS
+| grid for us.
+| 
+| 
+*/
+
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 4);
+
+/*
+| Create our outer container to hold content
+*/
+.container {
+	@include outer-container;
+
+	//max-width: 100%;
+	
+	// &.medium { max-width: 960px; }
+	// &.small  { max-width: 780px; }
+	
+}
+
+.column-three-quarters {
+ 	@include span-columns(9);
+}
+
+.column-one-quarter {
+	@include span-columns(3);
+}
+
+.primary-navigation {
+	
+	
+}
+
+
+

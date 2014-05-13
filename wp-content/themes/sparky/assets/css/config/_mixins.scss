@@ -1,0 +1,101 @@
+/*
+|--------------------------------------------------------------------------
+| Mixins
+|--------------------------------------------------------------------------
+| 
+| Any additional mixins that Bourbon doesn't include, drop them in
+| this file.
+| 
+*/
+
+
+// ---------------------------------------------------------------------
+// SCSS Retina Sprite helper
+// ---------------------------------------------------------------------
+// 
+// A helper mixin for writing retina-sprites that are based on a grid.
+// This is inspired by the mixin from Bourbon.io except this is simpler
+// and works better for me, I've had odd issues with the one in Bourbon.
+// 
+// The hidpi mixin comes from Bourbon.io. If you do not use Bourbon,
+// please replace that line with:
+// @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+//        only screen and (min--moz-device-pixel-ratio: 1.3),
+//        only screen and (-o-min-device-pixel-ratio: 1.3 / 1),
+//        only screen and (min-resolution: 125dpi),
+//        only screen and (min-resolution: 1.3dppx) {}
+// 
+@mixin retina-sprite( $filename , $background-size , $extension: 'png' , $retina-filename: null ) {
+  background-image: url("#{$filename}.#{$extension}");
+	
+	@include hidpi {
+		@if $retina-filename {
+			background-image: url("#{$retina-filename}.#{$extension}");
+		}
+		@else {
+			background-image: url("#{$filename}@x2.#{$extension}");
+		}
+		background-size: $background-size;
+	}
+}
+
+// ---------------------------------------------------------------------
+// SCSS Sprite position helper
+// ---------------------------------------------------------------------
+// 
+// Allows you to easily set the background position of an element based
+// on a grid.
+// 
+// Example: background-position( 0 , 1 , 50px );
+// 
+@mixin sprite-position( $x , $y , $grid-x: 50px , $grid-y: $grid-x ) {
+	background-position: (-$x * $grid-x) (-$y * $grid-y);
+}
+
+
+
+// ---------------------------------------------------------------------
+// Icons mixins
+// ---------------------------------------------------------------------
+// 
+// The icon-base mixin defines the styles for all icons.
+// The icon mixin sets the sprite grid background position and
+//     adjusts the width/height if provided, as well as nudging the
+//     position of the icon using the Bourbon position mixin.
+@mixin icon-base {
+	@include position( relative , 2px 0 0 0 );
+	@include size( 16 );
+	background-image: url( $img + 'sprite.png' );
+	display: inline-block;
+	margin-right: 5px;
+}
+
+@mixin icon( $x , $y , $width: null , $height: null , $nudge: null ) {
+	@include sprite-position( $x , $y );
+	
+	@if $width  { width: $width; }
+	@if $height { height: $height; }
+	@if $nudge  { @include position( relative , $nudge ); }
+}
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Font mixin
+|--------------------------------------------------------------------------
+| 
+| Simple font mixin that will automatically set the line-height. Also
+| allows us to set the colour at the same time.
+| This allows us to override the default base-line-height.
+| 
+*/
+@mixin font( $weight , $size , $family , $colour: false , $lh-multiplier: false ) {
+	@if not $lh-multiplier { $lh-multiplier: $base-line-height; }
+	
+	$lh: $size * $lh-multiplier;
+	
+	@if $colour { color: $colour; }
+	
+	font: $weight #{$size}/#{$lh} $family;
+}

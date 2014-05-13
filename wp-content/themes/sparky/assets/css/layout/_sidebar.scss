@@ -1,0 +1,40 @@
+#nav-bar {
+	background: $colour-secondary;
+	width: 100%;
+	font-family: "Open Sans";
+	font-weight: bold;
+
+	ul {
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+	}
+	
+	li {
+		padding: 15px 75px 15px 0;
+		float: left;
+		list-style-type: none;
+		//@include span-columns(4);
+		@include media($tablet) {
+			//@include span-columns(12);
+		}
+
+		@include media($mobile) {
+			//@include span-columns(12);
+			display: block;
+			padding: 10px;
+			margin: 0;
+			width: 100%;
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	a:hover {
+		color: #0ab8b0;
+	}
+
+	a {
+		color: $font-colour;
+		text-decoration: none;
+	}
+}

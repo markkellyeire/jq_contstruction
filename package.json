@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "gulp": "~3.6.0",
+    "gulp-util": "~2.2.14",
+    "gulp-ruby-sass": "~0.4.0",
+    "gulp-uglify": "~0.2.1",
+    "gulp-concat": "~2.2.0",
+    "gulp-notify": "~1.2.4",
+    "watchr": "~2.4.11",
+    "gulp-livereload": "~1.2.0"
+  }
+}

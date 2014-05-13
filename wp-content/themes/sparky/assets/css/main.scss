@@ -1,0 +1,61 @@
+/*
+|--------------------------------------------------------------------------
+| Main stylesheet
+|--------------------------------------------------------------------------
+| 
+| This is the main stylesheet file. It should have no styles in it but it
+| should import all the required files from the SMACSS-categorised
+| categories. The explanation for the layout is as follows:
+| 
+| BASE
+| This is where all the base styles live; resets, element defaults,
+| default font sizes, etc. This category is mainly dominated by element
+| selectors. You should always ask yourself if a ruleset must live in
+| base in order to not lose flexibility down the road.
+| 
+| LAYOUT
+| In this section you specify all types of layout containers, such as
+| header, footer, content, sidebar, etc. The layout elements haven't got
+| any styles applied to them, they only divide the website into sections.
+| This is the layer where grid systems etc, would be living.
+| 
+| MODULES
+| The bulk of your css is made up of independent modules and submodules.
+| Every module should be completely independent of its context and should
+| work within any layout container or other module.
+| 
+| If a specific context requires changes to a module you rather create
+| a submodule that describes the context instead changing styles based
+| on the parent.
+| 
+| STATE
+| Modules can be in different types of states: class-based-states(.is-active),
+| pseudo-classes(:hover, :focus), attribute states(data-state="rotating"),
+| or @mediaquery states.
+| These states belong directly to the modules but have a different category
+| because the have their own naming convention and usage rules.
+| 
+| THEME
+| SMACSS points to an optional fifth category, theme, but this is only
+| applicable to pages that require theming. Theme styles override or extend
+| the modules, and only apply colors and backgrounds.
+| 
+| VENDOR
+| Any external libraries or plugin files should reside in the vendor directory.
+| 
+*/
+
+@import "config/config",
+		"config/mixins",
+		
+		"vendor/bourbon/bourbon",
+		"vendor/normalize",
+		"vendor/neat/neat",
+		
+		"base/_base",
+		"layout/_layout",
+		"modules/_modules",
+		"state/_state",
+		"theme/_theme",
+		
+		"vendor/_vendor";

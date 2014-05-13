@@ -1,0 +1,18 @@
+/*
+|--------------------------------------------------------------------------
+| Layout stylesheet
+|--------------------------------------------------------------------------
+| 
+| In this section you specify all types of layout containers, such as
+| header, footer, content, sidebar, etc. The layout elements haven't got
+| any styles applied to them, they only divide the website into sections.
+| This is the layer where grid systems etc, would be living.
+| 
+*/
+
+@import "grid",
+		"header",
+		"footer",
+		"body",
+		"content",
+		"sidebar";

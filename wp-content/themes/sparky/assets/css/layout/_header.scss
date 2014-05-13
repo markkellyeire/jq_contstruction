@@ -1,0 +1,21 @@
+.banner {
+	width: 100%;
+	color: black;
+	background: white;
+
+	@include media($mobile) { 
+		padding: 10px;
+	}
+
+	@include media($tablet) { 
+		padding: 10px;
+	}
+}
+
+#header {
+	@extend .banner;
+}
+
+#footer {
+	@extend .banner;
+}

@@ -1,0 +1,54 @@
+/*
+|--------------------------------------------------------------------------
+| Config
+|--------------------------------------------------------------------------
+| 
+| Store all our variables here, they will be available throughout all the
+| SCSS files.
+| 
+*/
+
+
+// Debugging.
+$debug: true;
+
+
+// Fonts.
+$font-primary: "Open Sans";
+
+$font-secondary: "Adamina";
+
+$font-colour: #ECF0F1;
+
+$font-colour-tertiary: #ec7511;
+
+$base-font-size: 100%;
+$base-line-height: 1.3; // This is multiplied by the base-font-size value.
+
+// Global colour declarations.
+$colour-primary:   #222;
+$colour-secondary: #005f77;
+$colour-tertiary: #148E96;
+
+$colour-body: #333;
+$colour-links: $colour-primary;
+$colour-links-hover: darken( $colour-links , 6 );
+
+// Global dimension settings
+$header-height: 90px;
+
+
+// Directories - define a relative path to the images directory.
+$img: '../img/';
+
+.blue {
+	color: $colour-secondary;
+}
+
+.orange {
+	color: $font-colour-tertiary;
+}
+
+.light-blue {
+	color: $colour-tertiary;
+}

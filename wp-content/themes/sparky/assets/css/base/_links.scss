@@ -1,0 +1,10 @@
+a {
+	@include transition( all 0.3s );
+	color: $colour-links;
+	text-decoration: underline;
+	
+	&:hover {
+		color: $colour-links-hover;
+		text-decoration: none;
+	}
+}

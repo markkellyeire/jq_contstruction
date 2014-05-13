@@ -1,0 +1,14 @@
+/*
+|--------------------------------------------------------------------------
+| State stylesheet
+|--------------------------------------------------------------------------
+| 
+| Modules can be in different types of states: class-based-states(.is-active),
+| pseudo-classes(:hover, :focus), attribute states(data-state="rotating"),
+| or @mediaquery states.
+| These states belong directly to the modules but have a different category
+| because the have their own naming convention and usage rules.
+| 
+*/
+
+@import "global";

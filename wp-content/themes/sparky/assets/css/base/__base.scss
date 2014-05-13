@@ -1,0 +1,16 @@
+/*
+|--------------------------------------------------------------------------
+| Base stylesheet
+|--------------------------------------------------------------------------
+| 
+| This is where all the base styles live; resets, element defaults,
+| default font sizes, etc. This category is mainly dominated by element
+| selectors. You should always ask yourself if a ruleset must live in
+| base in order to not lose flexibility down the road.
+| 
+*/
+
+@import "globals",
+		"links",
+		"headings",
+		"tables";
